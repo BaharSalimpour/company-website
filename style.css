@@ -343,3 +343,230 @@ footer {
         font-size: 2rem;
     }
 }
+
+/* استایل‌های صفحات داخلی */
+
+/* دکمه برگشت */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.back-btn:hover {
+    color: #2980b9;
+}
+
+/* صفحه محصول */
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.product-gallery .main-image {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.thumbnail-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnail-grid img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumbnail-grid img:hover,
+.thumbnail-grid img.active {
+    border-color: #3498db;
+}
+
+.product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.rating {
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features li i {
+    color: #27ae60;
+}
+
+.specs table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.specs tr:last-child td {
+    border-bottom: none;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* صفحه عضو تیم */
+.member-profile {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.member-header {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.member-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #f8f9fa;
+}
+
+.member-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-basic-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.position {
+    font-size: 1.3rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.member-meta {
+    display: flex;
+    gap: 20px;
+    color: #666;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background: #e8f4fc;
+    color: #3498db;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.timeline {
+    border-right: 2px solid #3498db;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    right: -27px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: #3498db;
+    border-radius: 50%;
+}
+
+.timeline-date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.social-btn.linkedin { background: #0077b5; }
+.social-btn.twitter { background: #1da1f2; }
+.social-btn.github { background: #333; }
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .product-detail {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .member-meta {
+        justify-content: center;
+    }
+}
